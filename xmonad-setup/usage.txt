@@ -1,3 +1,0 @@
-put "xmonad.hs" in the .config/xmonad/ or .xmonad/ directory
-put .xinitrc and .resolution.hs in ~/
-start xmonad with "startx"
