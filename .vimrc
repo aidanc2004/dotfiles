@@ -1,4 +1,4 @@
-""" Indenting shit of something lmao idk
+""" Indenting
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -6,7 +6,9 @@ set expandtab
 set ai
 
 
-""" Haskell Syntax Highlighting
+""" Haskell
+
+" Syntax highlighting
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -19,7 +21,7 @@ let g:haskell_enable_typeroles = 1        " highlighting for type roles
 let g:haskell_enable_static_pointers = 1  " highlighting for `static`
 let g:haskell_backpack = 1                " highlighting for backpack keywords
 
-" bunch of indenting shit
+" Indenting
 let g:haskell_indent_if = 2
 let g:haskell_indent_case = 4
 let g:haskell_indent_let = 4
