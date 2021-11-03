@@ -37,11 +37,13 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-;; Ivy
-(use-package ivy
-  :diminish
-  :config
-  (ivy-mode 1))
+;; Smex
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-etended-command)
+
+;; Ido
+(ido-mode 1)
 
 ;; tirtree
 (require 'windata)
@@ -77,7 +79,7 @@
  '(custom-safe-themes
    '("81c3de64d684e23455236abde277cda4b66509ef2c28f66e059aa925b8b12534" default))
  '(package-selected-packages
-   '(gruber-darker-theme dirtree ivy use-package hindent haskell-mode)))
+   '(smex gruber-darker-theme dirtree ivy use-package hindent haskell-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
