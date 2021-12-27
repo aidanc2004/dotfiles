@@ -10,6 +10,8 @@
 
 (setq visible-bell t)   ; flash part of screen instead of using computer speaker
 
+(setq column-number-mode t) ; show line column
+
 ;; Font
 (set-face-attribute 'default nil :height 125 :font "Fira Code")
 
@@ -37,6 +39,7 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+
 ;; Smex
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -63,6 +66,11 @@
 ;; CL
 (load (expand-file-name "~/.quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "sbcl")
+
+;; Org Mode
+(add-hook 'org-mode-hook (lambda ()
+          (toggle-word-wrap)
+          (toggle-truncate-lines)))
 
 ;; scroll one line at a time (less "jumpy" than defaults)
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 2))) ; one line at a time    
